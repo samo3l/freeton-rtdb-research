@@ -1,6 +1,3 @@
-// Run this with the hyperspace-simulator
-// hyperspace-simulator index.js
-
 const { Client } = require('hyperspace')
 const Hyperbee = require('hyperbee')
 const lexint = require('lexicographic-integer')
@@ -9,23 +6,11 @@ const hypercore = require('hypercore')
 start()
 
 async function start () {
-  const { corestore, replicate } = new Client()
-  const store = corestore()
 
   const db = new Hyperbee(hypercore('./imdb', { sparse: true }), { keyEncoding: 'utf-8', valueEncoding: 'json' })
   await db.ready()
 
-/*
-  db.createReadStream({ reverse: true, limit: 1 }).on('data', (d) => {
-    console.log(d)
-  })
-*/
-
-
-  for await (const { key, value } of db.createReadStream({ reverse: true, limit: 1 }).on('data', (d)) => {
-    console.log(key, value)
-  })
-
+  await getLatest(db, 10000)
 
 //  await getall(db)
 //  console.log()
@@ -45,6 +30,12 @@ async function start () {
     console.log('value:', value)
   }
 */
+}
+
+async function getLatest (db, count) {
+  const rs = db.createHistoryStream({ reverse: true, limit: count }).on('data', (d) => {
+    console.log(d)
+  })
 }
 
 async function getSingleId (db) {
