@@ -22,7 +22,7 @@ async function start () {
   const db = new Hyperbee(core, { keyEncoding: 'utf-8', valueEncoding: 'json' })
   await db.ready()
 
-  const dblocal = new Hyperbee(hypercore('./testdb', { sparse: true }), { keyEncoding: 'utf-8', valueEncoding: 'json' })
+  const dblocal = new Hyperbee(hypercore('./imdb', { sparse: true }), { keyEncoding: 'utf-8', valueEncoding: 'json' })
   await dblocal.ready()
 
   await getall(db,dblocal)
