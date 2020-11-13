@@ -12,7 +12,7 @@ async function start () {
   const { corestore, replicate } = new Client()
   const store = corestore()
 
-  const db = new Hyperbee(hypercore('./testdb', { sparse: true }), { keyEncoding: 'utf-8', valueEncoding: 'json' })
+  const db = new Hyperbee(hypercore('../../hyperbee-dynalite/testdb', { sparse: true }), { keyEncoding: 'utf-8', valueEncoding: 'json' })
   await db.ready()
 
   db.createReadStream({ reverse: true, limit: 1 }).on('data', (d) => {
