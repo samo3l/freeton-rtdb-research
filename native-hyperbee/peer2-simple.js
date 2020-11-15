@@ -12,13 +12,12 @@ async function start () {
   const core = store.get({ key: STATS_CORE_KEY, valueEncoding: 'json' })
 
   await core.ready()
+  await replicate(core)
   console.log('Core key is:', core.key.toString('hex'))
   console.log(core)
 
-  // Create a new Hyperbee database with String keys/values.
   const db = new Hyperbee(core, { keyEncoding: 'utf-8', valueEncoding: 'utf-8' })
 
   const { value } = await db.get('baz')
-  // This should be 'baz-value'. Same idea for the other keys.
   console.log('baz value:', value)
 }
