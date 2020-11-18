@@ -1,6 +1,6 @@
 "use strict";
 
-const uuid = require("uuid/v4");
+const uuid = require("uuid-v4");
 const leveldb = require("levelup");
 const Benchmarkify = require("benchmarkify");
 const benchmark = new Benchmarkify("Pool benchmark").printHeader();
