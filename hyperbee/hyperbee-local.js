@@ -10,7 +10,7 @@ async function start () {
   const db = new Hyperbee(hypercore('./imdb', { sparse: true }), { keyEncoding: 'utf-8', valueEncoding: 'json' })
   await db.ready()
 
-  await getLatest(db, 10000)
+  await getLatest(db, 10)
 
 //  await getall(db)
 //  console.log()

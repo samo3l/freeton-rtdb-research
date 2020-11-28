@@ -1,0 +1,15 @@
+{
+  "name": "dynalite-research",
+  "dependencies": {
+    "hyperspace": "^3.15.0",
+    "aws-sdk": "*",
+    "dynalite": "^3.2.1",
+    "hyperbee": "^0.0.18",
+    "lexicographic-integer": "*",
+    "split2": "*",
+    "fs": "*",
+    "crypto": "*",
+    "hypercore": "^9.6.0",
+    "pump": "^3.0.0"
+  }
+}

@@ -1,7 +1,5 @@
 {
-  "name": "kappa-workshop",
-  "description": "P2P collaboration workshop",
-  "license": "MIT",
+  "name": "multifeed-research",
   "dependencies": {
     "chalk": "^2.4.1",
     "discovery-swarm": "^5.1.2",

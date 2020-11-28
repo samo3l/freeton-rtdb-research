@@ -1,0 +1,9 @@
+{
+  "name": "hypercore-research",
+  "dependencies": {
+    "hyperswarm": "^2.15.2",
+    "crypto": "*",
+    "hypercore": "^9.6.0",
+    "pump": "^3.0.0"
+  }
+}

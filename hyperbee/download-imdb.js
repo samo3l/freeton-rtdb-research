@@ -16,6 +16,7 @@ async function start () {
 
   const core = store.get({ key: IMDB_KEY })
 
+  await core.ready()
   await replicate(core)
   console.log('core:', core)
 

@@ -1,0 +1,14 @@
+{
+  "name": "hyperbee-research",
+  "dependencies": {
+    "hyperspace": "^3.12.0",
+    "hyperbee": "^0.0.18",
+    "lexicographic-integer": "^1.1.0",
+    "@corestore/networker": "^1.0.4",
+    "split2": "*",
+    "fs": "*",
+    "crypto": "*",
+    "hypercore": "^9.6.0",
+    "pump": "^3.0.0"
+  }
+}

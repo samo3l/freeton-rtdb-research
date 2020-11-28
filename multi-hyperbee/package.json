@@ -1,0 +1,21 @@
+{
+  "homepage": "https://github.com/tradle/multi-hyperbee#readme",
+  "dependencies": {
+    "automerge": "^0.14.1",
+    "hyperbee": "0.0.18",
+    "hypercore": "^9.6.0",
+    "lodash": "^4.17.20",
+    "pump": "^3.0.0",
+    "sorted-union-stream": "^3.0.1",
+    "multi-hyperbee": "https://github.com/tradle/multi-hyperbee"
+  },
+  "devDependencies": {
+    "hypercore-peer-auth": "git+https://github.com/Frando/hypercore-peer-auth.git",
+    "rimraf": "^3.0.2",
+    "hyperswarm": "^2.15.2",
+    "crypto": "^1.0.1",
+    "minimist": "^1.2.5",
+    "random-access-memory": "^3.1.1",
+    "tape": "^5.0.1"
+  }
+}

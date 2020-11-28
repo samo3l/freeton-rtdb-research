@@ -19,7 +19,7 @@ async function main () {
 
   const db = new Hyperbee(core)
 
-  const s = fs.createReadStream('test.titles').pipe(split2())
+  const s = fs.createReadStream('title.basics.tsv').pipe(split2())
 
   let max = 4096
   let first = true
